@@ -1,0 +1,29 @@
+.navbar-container{
+    display: flex;
+    margin: 10px;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+
+
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-links > li {
+    padding: 12px;
+    list-style: none;
+}
+
+.navbar-links > li:hover {
+    color: #f4ce14;
+    cursor: pointer;
+}
+
+
+.navbar-logo {
+    max-height: 50px;
+}
