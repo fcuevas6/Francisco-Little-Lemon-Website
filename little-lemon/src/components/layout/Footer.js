@@ -30,38 +30,39 @@ export default function Footer() {
         {icon: faTiktok, info: "Tiktok"}
     ]
     return (
-       <footer className="footer-container">
-            <div>
+       <footer className="site-footer">
+            <div className="footer-container">
                 <img src={whiteLogo} alt="Little Lemon logo" className="footer-logo" />
-            </div>
-            <div>
-                <nav>
-                    <h4>Site Map</h4>
-                    <ul>
-                        <li>Home</li>
-                        <li>Menu</li>
-                        <li>About us</li>
-                        <li>Reservations</li>
-                        <li>Order Online</li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <h4>Contact us</h4>
-                <address>
-                {contactInfo.map((contact, index) =>
-                        <p key={index}>
-                            <FontAwesomeIcon icon={contact.icon}/> {contact.info}
-                        </p>
-                )}
-                </address>
-            </div>
-            <div>
-                <h4>Connect with us</h4>
-                {socialsInfo.map((social, index) => 
-                    <a key={index}><FontAwesomeIcon icon={social.icon}/></a>
-                )}
-
+                <div className="footer-site-map">
+                <h4>Site Map</h4>
+                    <nav className="footer-site-map list">
+                        <ul>
+                            <li>Home</li>
+                            <li>Menu</li>
+                            <li>About us</li>
+                            <li>Reservations</li>
+                            <li>Order Online</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div className="footer-address">
+                    <h4>Contact us</h4>
+                    <address>
+                    {contactInfo.map((contact, index) =>
+                            <p key={index}>
+                                <FontAwesomeIcon icon={contact.icon}/> {contact.info}
+                            </p>
+                    )}
+                    </address>
+                </div>
+                <div className="footer-socials">
+                    <h4>Connect with us</h4>
+                    <address>
+                        {socialsInfo.map((social, index) => 
+                            <a key={index}><FontAwesomeIcon icon={social.icon} />{social.info}</a>
+                        )}
+                    </address>
+                </div>
             </div>
        </footer>
     )
