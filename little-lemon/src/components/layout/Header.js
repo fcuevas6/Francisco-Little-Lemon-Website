@@ -1,6 +1,8 @@
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./Header.css"
 import mainLogo from "./assets/logo.png"
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping"
 
 export default function Header() {
     return (
@@ -13,6 +15,7 @@ export default function Header() {
                     <li>About us</li>
                     <li>Reservations</li>
                     <li>Order Online</li>
+                    <li><FontAwesomeIcon icon={faCartShopping} /></li>
                 </ul>
             </nav>
         </header>
