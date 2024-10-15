@@ -1,0 +1,13 @@
+.week-specials {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.week-specials-header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 1.875rem;
+}

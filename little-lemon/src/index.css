@@ -1,13 +1,58 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+.container {
+  max-width: 61.625rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.grid {
+  display: grid;
+}
+
+body {
+  font-family: Karla, sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  color: #495E57;
+}
+
+a {
+  text-decoration: none;
+/*  color: #495E57; */
+}
+
+h1, h2 {
+  line-height: 1;
+  font-family: "Markazi Text";
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.primary-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 0.175rem solid #F4CE14 ;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-weight: bold;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: #495E57;
+  border-color: #F4CE14;
+  color: #FFFFFF;
 }
