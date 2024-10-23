@@ -1,19 +1,18 @@
 import "./MealCard.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPersonBiking } from '@fortawesome/free-solid-svg-icons'
 
 
-export default function MealCard({meal}) {
+export default function MealCard({ meal }) {
     return (
-        <article className="meal-card">
-            <div className="meal-card-img">
+        <div className="meal-card">
                 <img src={meal.image} alt={meal.name} />
-            </div>
-            <div className="meal-card-header">
-                <h3>{meal.name}</h3>
-                <span>{meal.price}</span>
-            </div>
-            <div className="meal-card-body">
+                <div className="meal-card-heading">
+                    <h3>{meal.name}</h3>
+                    <p>{meal.price}</p>
+                </div>
                 <p>{meal.description}</p>
-            </div>
-        </article>
+                <p><strong>Order Delivery</strong><span><FontAwesomeIcon icon={faPersonBiking}/></span></p>
+        </div>
     )
 }

@@ -1,18 +1,31 @@
 .meal-card {
-    grid-column: auto;
-    grid-row: 2;
+    display: grid;
+    grid-template-rows: 2fr 0.75fr 1.5fr;
     min-height: 32rem;
-    padding-bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
     border-radius: 1rem;
     background-color: #EDEFEE;
-
+    border: 1px solid #e0e0e0;
 }
 
-.meal-card-img img {
+.meal-card-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+}
+
+.meal-card > p {
+    padding: 1rem 0.5rem;
+}
+
+
+.meal-card > img {
     width: 100%;
     height: 14rem;
     object-fit: cover;
+    border-radius: 0.9rem 0.9rem 0 0;
 
+}
+
+span {
+    padding-left: 0.75rem;
 }

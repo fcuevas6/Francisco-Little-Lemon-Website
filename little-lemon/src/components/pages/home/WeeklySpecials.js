@@ -3,15 +3,19 @@ import MealCard from "./MealCard";
 import "./WeeklySpecials.css"
 
 export default function WeeklySpecials() {
+
+    const isWeeklySpecial = meals.filter(meal => meal.isSpecial === true)
     return (
-        <section className="container grid week-specials">
+        <section className="container week-specials">
             <div className="week-specials-header">
-            <h2>This week specials!</h2>
-            <button className="primary-btn">See Menu</button>
+                <h2>This weeks specials!</h2>
+                <button className="primary-btn">See Menu</button>
             </div>
-            {meals.map((meal, index) => 
-                <MealCard key={index} meal={meal} />
-            )}
+            <div className="meal-card-container" >
+                {isWeeklySpecial.map((meal, index) => 
+                    <MealCard key={index} meal={meal} />
+                )}
+            </div>
         </section>
 
     )
