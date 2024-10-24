@@ -3,6 +3,9 @@ import pastaImg from "./home/assets/pasta.jpg"
 import bruschettaImg from "./home/assets/bruschetta.jpg"
 import saladImg from "./home/assets/greek-salad.jpg"
 import lemonImg from "./home/assets/lemon-dessert.jpg"
+import aliceImg from "./home/assets/person-1.jpg"
+import mikeImg from "./home/assets/person-2.jpg"
+import sonyaImg from "./home/assets/person-3.jpg"
 
 export const meals = [
     {
@@ -42,3 +45,23 @@ export const meals = [
     }
 ]
 
+export const reviews = [
+    {
+        name: "Alice M.",
+        image: aliceImg,
+        rating: 4,
+        review: "The flavors at this Mediterranean gem are incredible! From the fresh, vibrant salads to the perfectly grilled seafood, every dish feels like a trip to the coast."
+    },
+    {
+        name: "Mike A.",
+        image: mikeImg,
+        rating: 3,
+        review: "Amazing atmosphere and even better food! The lemon dessert was the perfect sweet finish after an unforgettable meal of salmon and beetroot pasta."
+    },
+    {
+        name: "Sonya R.",
+        image: sonyaImg,
+        rating: 4,
+        review: "This place never disappoints—authentic Mediterranean dishes with fresh ingredients and bold flavors. Highly recommend the bruschetta and the signature Greek salad!"
+    }
+]

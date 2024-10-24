@@ -1,0 +1,10 @@
+.review-container {
+    display: block;
+    justify-items: center;
+    padding: 2rem;
+}
+
+.review-image {
+    border-radius: 50%;
+    width: 14rem;
+}

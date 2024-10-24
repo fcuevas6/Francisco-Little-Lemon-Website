@@ -5,11 +5,10 @@
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2em;
     align-items: start;
-    padding: 50px;
-
+    padding: 4rem 6rem;
 }
 
 .footer-logo {

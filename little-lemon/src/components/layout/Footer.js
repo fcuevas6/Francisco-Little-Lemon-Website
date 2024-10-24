@@ -50,7 +50,7 @@ export default function Footer() {
                     <address>
                     {contactInfo.map((contact, index) =>
                             <p key={index}>
-                                <FontAwesomeIcon icon={contact.icon}/> {contact.info}
+                                <FontAwesomeIcon icon={contact.icon} /> {contact.info}
                             </p>
                     )}
                     </address>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <div className="footer-socials">
                     <h4>Connect with us</h4>
                     <address>
-                        {socialsInfo.map((social, index) => 
+                        {socialsInfo.map((social, index) =>
                             <a key={index}><FontAwesomeIcon icon={social.icon} />{social.info}</a>
                         )}
                     </address>

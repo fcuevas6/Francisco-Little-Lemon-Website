@@ -1,10 +1,11 @@
 import {meals} from "../data.js"
-import MealCard from "./MealCard";
+import MealCard from "./MealCard.js";
 import "./WeeklySpecials.css"
 
 export default function WeeklySpecials() {
 
     const isWeeklySpecial = meals.filter(meal => meal.isSpecial === true)
+
     return (
         <section className="container week-specials">
             <div className="week-specials-header">
