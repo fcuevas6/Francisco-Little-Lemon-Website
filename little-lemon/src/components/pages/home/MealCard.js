@@ -12,7 +12,7 @@ export default function MealCard({ meal }) {
                     <p>{meal.price}</p>
                 </div>
                 <p>{meal.description}</p>
-                <p><strong>Order Delivery</strong><span><FontAwesomeIcon icon={faPersonBiking}/></span></p>
+                <p><strong>Order Delivery</strong><span className="delivery-icon"><FontAwesomeIcon icon={faPersonBiking}/></span></p>
         </div>
     )
 }

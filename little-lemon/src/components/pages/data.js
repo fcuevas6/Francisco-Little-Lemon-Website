@@ -40,7 +40,7 @@ export const meals = [
         name: "Lemon Delight Layered Dessert",
         image: lemonImg,
         price: "$9.99",
-        description: "A luscious layered treat featuring zesty lemon filling, light whipped cream, and a crunchy nutty crust, finished with a slice of fresh lemon and a sprinkle of chopped walnuts for the perfect balance of sweet and tangy.",
+        description: "A layered treat featuring zesty lemon filling, light whipped cream, and a crunchy nutty crust, finished with a slice of fresh lemon and chopped walnuts for the perfect balance of sweet and tangy.",
         isSpecial: true
     }
 ]

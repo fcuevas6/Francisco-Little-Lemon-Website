@@ -1,7 +1,8 @@
 .reviews-container {
-    background-color: aliceblue;
+    background-color: #EDEFEE;
+    display: flex;
 }
 
-.reviews-container {
-    display: flex;
+.reviews-container > div {
+    margin: 2rem auto;
 }
