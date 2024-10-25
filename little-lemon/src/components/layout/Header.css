@@ -12,15 +12,27 @@
 .navbar-links {
     display: flex;
     justify-content: space-between;
-}
-.navbar-links > li {
-    padding: 12px;
-    list-style: none;
+    list-style-type: none;
 }
 
-.navbar-links > li:hover {
+.link {
+    padding: 12px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: initial;
+}
+
+
+.link:hover {
     color: #f4ce14;
     cursor: pointer;
+}
+
+.link:active {
+    color: #495E57;
 }
 
 

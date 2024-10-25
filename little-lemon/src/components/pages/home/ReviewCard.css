@@ -7,20 +7,3 @@
 .review-image {
     border-radius: 50%;
     width: 10rem;
-    border: 1px solid #e0e0e0;
-}
-
-.review-container > h3 {
-    padding: .25rem 0;
-}
-
-.review-container > span {
-    padding: .25rem;
-    color: #F4CE14;
-}
-
-.review-container > p {
-    padding-top: .75rem;
-    text-align: center;
-    font-size: small;
-}

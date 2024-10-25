@@ -1,15 +1,5 @@
-import Layout from "../src/components/layout/Layout"
-import Home from "../src/components/pages/home/Home"
-
-
-function App() {
-  return (
-    <>
-      <Layout>
-        <Home />
-      </Layout>
-    </>
-  );
-}
-
-export default App;
+import { Routes, Route} from "react-router-dom"
+import Layout from "./components/layout/Layout"
+import Home from "./components/pages/home/Home"
+import Menu from "./components/pages/menu/Menu"
+import Reservations from "./components/pa
