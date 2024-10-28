@@ -1,4 +1,4 @@
-import {meals} from "../data.js"
+import { meals } from "../data.js"
 import MealCard from "./MealCard.js";
 import "./WeeklySpecials.css"
 

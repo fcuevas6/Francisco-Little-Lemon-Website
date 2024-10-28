@@ -6,8 +6,4 @@ export default function Layout({children}) {
     return (
         <>
         <Header />
-            <Outlet />
-        <Footer />
-      </>
-    )
-}
+            <Outl

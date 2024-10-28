@@ -1,0 +1,29 @@
+.menu-card-container {
+    display: flex;
+    height: 20rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    background-color: #EDEFEE;
+}
+
+.menu-card-image > img {
+    width: 25rem;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.menu-card-info {
+    display: grid;
+    padding: 2rem;
+}
+
+.menu-item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item-detail {
+    display: grid;
+}
