@@ -1,0 +1,21 @@
+.booking-container {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.booking-img > img {
+    height: 100%;
+    object-fit: fill;
+}
+
+.booking-area {
+    display: grid;
+    align-content: space-between ;
+    justify-items: center;
+    padding: 3rem;
+    gap: 1rem;
+    background-color: #EDEFEE;
+}

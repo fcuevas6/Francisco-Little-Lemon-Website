@@ -1,12 +1,12 @@
 .hero {
     background-color: #495E57;
-    padding-top: 3rem;
+    padding-top: 1rem;
+    margin-bottom: 6rem;
 }
 
 .container {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-bottom: 6rem;
 }
 
 .hero-information {

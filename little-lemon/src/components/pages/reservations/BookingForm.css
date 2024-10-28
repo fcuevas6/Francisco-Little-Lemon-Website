@@ -1,0 +1,21 @@
+form {
+    display: grid;
+    gap: .5rem;
+    
+}
+
+label > input, select{
+    margin-left: 1rem;
+    font-family: inherit;
+    height: 2rem;
+}
+
+label:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form > button {
+    margin-top: 1rem
+}

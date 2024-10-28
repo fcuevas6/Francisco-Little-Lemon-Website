@@ -13,4 +13,11 @@ export default function Header() {
                     <li><Link to="/" className="link">Home</Link></li>
                     <li><Link to="/menu" className="link">Menu</Link></li>
                     <li><Link className="link">About us</Link></li>
-                    <li><Link to="/reservations" className="link">Reservat
+                    <li><Link to="/reservations" className="link">Reservations</Link></li>
+                    <li><Link to="/order" className="link">Order Online</Link></li>
+                    <li><FontAwesomeIcon icon={faCartShopping} /></li>
+                </ul>
+            </nav>
+        </header>
+    )
+}
