@@ -1,21 +1,37 @@
 .booking-container {
-    display: grid;
-    grid-template-columns: 40% 1fr;
-    gap: 1rem;
-    align-items: center;
+    display: flex;
+    background-color: #EDEFEE;
+
 }
 
+.booking-img {
+    display: grid;
+    width: 40%;
+    overflow: hidden;
+    justify-content: center;
+
+}
 
 .booking-img > img {
     height: 100%;
-    object-fit: fill;
+
+
 }
 
 .booking-area {
+    width: 50rem;
     display: grid;
     align-content: space-between ;
     justify-items: center;
     padding: 3rem;
     gap: 1rem;
     background-color: #EDEFEE;
+}
+
+.confirmation-message {
+    text-align: center;
+}
+
+.confirmation-message > h3, p {
+    margin-top: 2rem;
 }

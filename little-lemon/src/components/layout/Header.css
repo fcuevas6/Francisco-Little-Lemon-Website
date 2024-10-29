@@ -27,4 +27,15 @@
 
 
 .link:hover {
-    color: #f4
+    color: #f4ce14;
+    cursor: pointer;
+}
+
+.link:active {
+    color: #495E57;
+}
+
+
+.navbar-logo {
+    max-height: 50px;
+}

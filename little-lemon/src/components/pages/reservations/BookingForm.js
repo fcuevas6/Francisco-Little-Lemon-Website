@@ -1,25 +1,79 @@
 import React, { useState } from 'react';
 import "./BookingForm.css"
 
-export default function BookingForm() {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('--');
+export default function BookingForm({ onSubmit }) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("")
+  const [phoneNum, setPhoneNum] = useState("")
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [people, setPeople] = useState(1);
-  const [occasion, setOccasion] = useState('');
+  const [occasion, setOccasion] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const bookingDetails = {
+      firstName,
+      lastName,
+      email,
+      phoneNum,
       date,
       time,
       people,
       occasion,
     };
+    onSubmit(bookingDetails);
     console.log('Booking Details:', bookingDetails);
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <div>
+        <label>
+          First Name:
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Last Name:
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Email:
+          <input
+            type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Telephone:
+          <input
+            type='text'
+            placeholder='ex. 222-234-5678'
+            value={phoneNum}
+            onChange={(e) => setPhoneNum(e.target.value)}
+            required
+          />
+        </label>
+      </div>
       <div>
         <label>
           Date:

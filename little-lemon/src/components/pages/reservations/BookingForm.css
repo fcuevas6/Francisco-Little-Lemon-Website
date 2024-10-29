@@ -1,12 +1,13 @@
 form {
     display: grid;
     gap: .5rem;
-    
 }
 
 label > input, select{
     margin-left: 1rem;
     font-family: inherit;
+    font-weight: 500;
+    font-size: medium;
     height: 2rem;
 }
 
