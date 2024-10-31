@@ -1,8 +1,19 @@
-.reviews-container {
+.reviews-wrapper {
     background-color: #EDEFEE;
-    display: flex;
+    padding: 1rem;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+
+.reviews-container > h2 {
+    padding: 1rem;
 }
 
 .reviews-container > div {
-    margin: 2rem auto;
+    margin: 1.5rem auto;
 }

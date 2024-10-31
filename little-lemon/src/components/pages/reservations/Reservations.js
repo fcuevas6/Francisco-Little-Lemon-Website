@@ -16,21 +16,20 @@ export default function Reservations() {
     console.log(reservationData)
 
     return (
-        <section>
+        <section className="container">
             <div className="booking-container">
                 {isSubmitted ? (
-                    <div className="container confirmation-message">
+                    <div className="confirmation-message">
                         <h1>Thank you {reservationData.firstName}, your table is booked!</h1>
                         <h3>{reservationData.firstName} {reservationData.lastName} your {reservationData.people} person reservation is set for {reservationData.date} at {reservationData.time}
                             {reservationData.occaison !== "None" || "" && ` to celebrate a ${reservationData.occasion}`}</h3>
                         <p>An email confirmation has been sent to {reservationData.email} <br/>If we need to contact you regarding your reservation we will use the provided phone number: {reservationData.phoneNum}</p>
-                        
                     </div>
                 ) : (
                     <>
                     <div className="booking-area">
                         <h2>Join us for dinner</h2>
-                        <h3>Fill out your reservation information below</h3>
+                        <h3>Fill out your reservation information below!</h3>
                         <BookingForm onSubmit={handleFormSubmit}/>
                     </div>
                     <div className="booking-img">

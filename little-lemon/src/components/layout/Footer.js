@@ -30,12 +30,12 @@ export default function Footer() {
         {icon: faTiktok, info: "Tiktok"}
     ]
     return (
-       <footer className="site-footer">
+       <footer className="container">
             <div className="footer-container">
                 <img src={whiteLogo} alt="Little Lemon logo" className="footer-logo" />
                 <div className="footer-site-map">
                 <h4>Site Map</h4>
-                    <nav className="footer-site-map list">
+                    <nav className="footer-site-map">
                         <ul>
                             <li>Home</li>
                             <li>Menu</li>
@@ -50,7 +50,7 @@ export default function Footer() {
                     <address>
                     {contactInfo.map((contact, index) =>
                             <p key={index}>
-                                <FontAwesomeIcon icon={contact.icon} /> {contact.info}
+                                <FontAwesomeIcon icon={contact.icon} className="icon" /> {contact.info}
                             </p>
                     )}
                     </address>
@@ -59,7 +59,7 @@ export default function Footer() {
                     <h4>Connect with us</h4>
                     <address>
                         {socialsInfo.map((social, index) =>
-                            <a key={index}><FontAwesomeIcon icon={social.icon} />{social.info}</a>
+                            <a key={index}><FontAwesomeIcon icon={social.icon} className="icon" />{social.info}</a>
                         )}
                     </address>
                 </div>

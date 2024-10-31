@@ -1,17 +1,17 @@
-
 .week-specials {
-    display: block;
+    padding: 1rem;
 }
 
 .week-specials-header {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    align-items: flex-end;
     margin-bottom: 1.875rem;
 }
 
 .meal-card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }

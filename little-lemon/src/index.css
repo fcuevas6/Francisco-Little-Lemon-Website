@@ -2,14 +2,11 @@
   margin: 0;
   padding: 0;
 }
-.container {
-  max-width: 61.625rem;
-  width: 90%;
-  margin: 3rem auto;
-}
 
-.grid {
-  display: grid;
+#root {
+  max-width: 70rem;
+  margin-inline: auto;
+
 }
 
 body {
@@ -21,9 +18,25 @@ body {
   color: #495E57;
 }
 
+.container {
+  /* display: grid; */
+  /* max-width: 70rem; */
+  /* justify-content: center; */
+  /* margin: 0 auto; */
+  /* margin: 0 2rem 0 2rem ; */
+  /* padding-inline: auto; */
+}
+/* .wrapper {
+  padding-inline: auto;
+} */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
-/*  color: #495E57; */
 }
 
 h1, h2 {

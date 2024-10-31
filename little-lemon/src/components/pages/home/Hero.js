@@ -3,8 +3,8 @@ import heroImg from "./assets/restaurant-food.jpg"
 
 export default function Hero() {
     return(
-        <section className="hero">
-            <div className="container grid">
+        <section className="container">
+            <div className="hero container">
                 <div className="hero-information">
                     <h1>Little Lemon</h1>
                     <h2>Chicago, IL</h2>

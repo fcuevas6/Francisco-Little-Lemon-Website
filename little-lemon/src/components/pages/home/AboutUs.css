@@ -1,21 +1,25 @@
 .about-us-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.about-us {
-    align-content: center;
+    display: flex;
+
+    align-items: center;
+    gap: 2rem;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    padding: 1rem;
 }
 
+
 .about-us > h2 {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .about-us > p {
-    padding: 1rem;
+    padding: 1rem 0;
+    white-space: normal;
 }
 
-.chefs > img {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem;
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-wrap: wrap;
+    }
 }
