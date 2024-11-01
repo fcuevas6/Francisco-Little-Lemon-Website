@@ -30,12 +30,14 @@ export default function Footer() {
         {icon: faTiktok, info: "Tiktok"}
     ]
     return (
-       <footer className="container">
+       <footer>
             <div className="footer-container">
+                <div>
                 <img src={whiteLogo} alt="Little Lemon logo" className="footer-logo" />
+                </div>
                 <div className="footer-site-map">
                 <h4>Site Map</h4>
-                    <nav className="footer-site-map">
+                    <nav className="site-map">
                         <ul>
                             <li>Home</li>
                             <li>Menu</li>

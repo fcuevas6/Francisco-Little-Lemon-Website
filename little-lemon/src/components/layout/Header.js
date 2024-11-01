@@ -29,8 +29,9 @@ export default function Header() {
                     <li><Link className="link" onClick={closeMenu}>About us</Link></li>
                     <li><Link to="/reservations" className="link" onClick={closeMenu}>Reservations</Link></li>
                     <li><Link to="/order" className="link" onClick={closeMenu}>Order Online</Link></li>
+                    <i><FontAwesomeIcon icon={faCartShopping} /></i>
                 </ul>
-                <i><FontAwesomeIcon icon={faCartShopping} /></i>
+
             </nav>
         </header>
     )

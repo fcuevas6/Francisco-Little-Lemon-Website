@@ -1,25 +1,26 @@
 .about-us-container {
     display: flex;
-
     align-items: center;
     gap: 2rem;
-
-    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-    padding: 1rem;
+    padding: 1em 0;
 }
 
 
 .about-us > h2 {
-    padding: 1rem 0;
+    padding: .5em 0;
 }
 
 .about-us > p {
-    padding: 1rem 0;
+    padding: 0.5em 0;
     white-space: normal;
 }
 
 @media (max-width: 768px) {
     .about-us-container {
         flex-wrap: wrap;
+    }
+
+    .about-us > p {
+        font-size: 0.875rem;
     }
 }

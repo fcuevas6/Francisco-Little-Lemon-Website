@@ -1,6 +1,7 @@
-.menu-card-container {
-    display: flex;
-    height: 20rem;
+/* .menu-card-container {
+    display: grid;
+    grid-template-columns: 15rem auto;
+    height: min-content;
     margin: 2rem 0;
     border-radius: 1rem;
     background-color: #EDEFEE;
@@ -26,4 +27,4 @@
 
 .menu-item-detail {
     display: grid;
-}
+} */

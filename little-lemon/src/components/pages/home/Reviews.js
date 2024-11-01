@@ -4,17 +4,13 @@ import "./Reviews.css"
 
 export default function Reviews() {
     return (
-        <section className="container">
-            <div className="reviews-wrapper">
-                <div>
-                <h2>Hear why our customers love us!</h2>
-                </div>
-                <div className="reviews-container">
+        <section className="reviews-container">
+            <h2>Hear why our customers love us!</h2>
+                <div className="reviews">
                     {reviews.map((review, index) => 
                     <ReviewCard key={index} review={review} />
                     )}
                 </div>
-            </div>
         </section>
     )
 }
