@@ -1,12 +1,12 @@
 .week-specials {
-    margin-bottom: 4rem;
+    margin: 1rem 0;
 }
 
 .week-specials-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-content: center;
-    align-items: flex-end;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 

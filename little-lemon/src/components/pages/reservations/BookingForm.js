@@ -10,9 +10,23 @@ export default function BookingForm({ onSubmit }) {
   const [time, setTime] = useState("");
   const [people, setPeople] = useState(1);
   const [occasion, setOccasion] = useState("");
+  const [error, setError] = useState("")
+
+  // const handlePhoneChange = (e) => {
+  //   const formattedValue = formatPhoneNumber(e.target.value);
+  //   setPhoneNum(formattedValue);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!time) {
+      setError("Please select a time");
+      return;
+    }
+    setError("")
+
+
     const bookingDetails = {
       firstName,
       lastName,
@@ -66,11 +80,12 @@ export default function BookingForm({ onSubmit }) {
         <label>
           Telephone:
           <input
-            type='text'
+            type='tel'
             placeholder='ex. 222-234-5678'
             value={phoneNum}
             onChange={(e) => setPhoneNum(e.target.value)}
             required
+            inputMode="numeric"
           />
         </label>
       </div>
@@ -89,6 +104,7 @@ export default function BookingForm({ onSubmit }) {
         <label>
         Time:
             <select value={time} onChange={(e) => setTime(e.target.value)} required>
+              <option value="">Select Time</option>
             {Array.from({ length: 12 }, (_, i) => {
                 const hour = 16 + Math.floor(i / 2); // Calculate the hour
                 const minute = (i % 2) * 30; // 0 for even indexes, 30 for odd indexes
@@ -104,6 +120,7 @@ export default function BookingForm({ onSubmit }) {
             })}
             </select>
         </label>
+        {error && <p className="error-message">{error}</p>}
       </div>
       <div>
         <label>

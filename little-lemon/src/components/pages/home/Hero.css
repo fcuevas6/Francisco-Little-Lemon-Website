@@ -6,7 +6,7 @@
 
 .hero {
     width: 80%;
-    max-width: 70rem;
+    max-width: 62rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -15,6 +15,9 @@
     gap: 2rem;
 }
 
+.hero-information {
+    padding: 1rem;
+}
 
 .hero-information h1 {
     color: #F4CE14;
@@ -27,10 +30,7 @@
 .hero-information p {
     color: #fff;
     padding-top: 2rem;
-}
-
-.hero-information button {
-    margin-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .hero-image {
@@ -40,4 +40,5 @@
     object-fit: cover;
     margin-bottom: -4rem;
     border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

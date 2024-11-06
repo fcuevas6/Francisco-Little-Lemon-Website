@@ -7,22 +7,15 @@ footer {
 }
 
 .footer-container {
-    padding: 2rem;
+    padding: 2rem 1rem;
     width: 80%;
-    max-width: 70rem;
+    max-width: 62rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem; */
 }
 
-.footer-container:first-child {
-    margin: 0 auto;
-}
 .footer-logo {
     max-height: 200px;
 }
