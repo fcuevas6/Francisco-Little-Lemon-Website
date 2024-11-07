@@ -12,10 +12,6 @@ export default function BookingForm({ onSubmit }) {
   const [occasion, setOccasion] = useState("");
   const [error, setError] = useState("")
 
-  // const handlePhoneChange = (e) => {
-  //   const formattedValue = formatPhoneNumber(e.target.value);
-  //   setPhoneNum(formattedValue);
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();

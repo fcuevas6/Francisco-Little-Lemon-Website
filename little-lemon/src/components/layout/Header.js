@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./Header.css"
 import mainLogo from "./assets/logo.png"
@@ -9,7 +9,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons/faX"
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const menuRef = useRef(null);
+    const [activeLink, setActiveLink] = useState("/")
+    // const menuRef = useRef(null);
 
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen)
@@ -19,21 +20,22 @@ export default function Header() {
         setIsMenuOpen(false)
     }
 
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
-                closeMenu();
-            }
-        }
+    // useEffect(() => {
+    //     function handleClickOutside(event) {
+    //         if (menuRef.current && !menuRef.current.contains(event.target)) {
+    //             closeMenu();
+    //         }
+    //     }
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     return () => {
+    //         document.removeEventListener("mousedown", handleClickOutside);
+    //     };
+    // }, [menuRef]);
 
-        // Bind the event listener
-        document.addEventListener("mousedown", handleClickOutside);
-
-        // Cleanup the event listener on component unmount
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [menuRef]);
+    function handleLinkClick(link) {
+        setActiveLink(link);
+        closeMenu()
+    }
 
     return (
         <header className="container">
@@ -41,17 +43,47 @@ export default function Header() {
                 <div className="hamburger" onClick={toggleMenu}>
                     {!isMenuOpen ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faX} />}
                 </div>
-                <Link to="/">
-                <img src={mainLogo} alt="Main logo" className="navbar-logo" />
+                <Link to="/" onClick={handleLinkClick}>
+                    <img src={mainLogo} alt="Main logo" className="navbar-logo" />
                 </Link>
                 <ul className={`navbar-links ${isMenuOpen ? "active" : " "}`}>
-                    <li><Link to="/" className="link" onClick={closeMenu}>Home</Link></li>
-                    <li><Link to="/menu" className="link" onClick={closeMenu}>Menu</Link></li>
-                    <li><Link to="/about" className="link" onClick={closeMenu}>About us</Link></li>
-                    <li><Link to="/reservations" className="link" onClick={closeMenu}>Reservations</Link></li>
-                    <li><Link to="/order" className="link" onClick={closeMenu}>Order Online</Link></li>     
+                    <li>
+                        <Link
+                            to="/"
+                            className={`link ${activeLink === "/" ? "active" : ""}`}
+                            onClick={() => handleLinkClick("/")}>Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/menu"
+                            className={`link ${activeLink === "/menu" ? "active" : ""}`}
+                            onClick={() => handleLinkClick("/menu")}>Menu
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/about"
+                            className={`link ${activeLink === "/about" ? "active" : ""}`}
+                            onClick={() => handleLinkClick("/about")}>About us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/reservations"
+                            className={`link ${activeLink === "/reservations" ? "active" : ""}`}
+                            onClick={() => handleLinkClick("/reservations")}>Reservations
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/order"
+                            className={`link ${activeLink === "/order" ? "active" : ""}`}
+                            onClick={() => handleLinkClick("/order")}>Order Online
+                        </Link>
+                    </li>
                 </ul>
-                <i><FontAwesomeIcon icon={faCartShopping} /></i>
+                <Link to="/order" className="link"><FontAwesomeIcon icon={faCartShopping} /></Link>
 
             </nav>
         </header>

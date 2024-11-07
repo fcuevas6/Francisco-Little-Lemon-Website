@@ -1,0 +1,17 @@
+.order-page {
+    display: grid;
+    padding: 2rem 0;
+    text-align: center;
+    gap: 2rem;
+}
+
+.build-icon {
+    height: 6rem;
+    color: #F4CE14 ;
+}
+
+.order-page-btn {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}

@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 import "./Footer.css"
 import whiteLogo from "./assets/logo-white.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faPhone,
     faAt,
     faLocationDot
-} from '@fortawesome/free-solid-svg-icons'
+} from "@fortawesome/free-solid-svg-icons"
 import {
     faInstagram,
     faSquareFacebook,
@@ -24,10 +25,10 @@ export default function Footer() {
     ]
 
     const socialsInfo = [
-        {icon: faInstagram, info: "Instagram"},
-        {icon: faSquareFacebook, info: "Facebook"},
-        {icon: faYelp, info: "Yelp"},
-        {icon: faTiktok, info: "Tiktok"}
+        {icon: faInstagram, info: "Instagram", href:"https://www.instagram.com"},
+        {icon: faSquareFacebook, info: "Facebook", href:"https://facebook.com"},
+        {icon: faYelp, info: "Yelp", href:"https://yelp.com"},
+        {icon: faTiktok, info: "Tiktok", href:"https://tiktok.com"}
     ]
     return (
        <footer>
@@ -39,11 +40,11 @@ export default function Footer() {
                 <h4>Site Map</h4>
                     <nav className="site-map">
                         <ul>
-                            <li>Home</li>
-                            <li>Menu</li>
-                            <li>About us</li>
-                            <li>Reservations</li>
-                            <li>Order Online</li>
+                            <li><Link to="/" className="footer-link">Home</Link></li>
+                            <li><Link to="/menu" className="footer-link">Menu</Link></li>
+                            <li><Link to="/about" className="footer-link">About us</Link></li>
+                            <li><Link to="/reservations" className="footer-link">Reservations</Link></li>
+                            <li><Link to="/order" className="footer-link">Order Online</Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -61,7 +62,7 @@ export default function Footer() {
                     <h4>Connect with us</h4>
                     <address>
                         {socialsInfo.map((social, index) =>
-                            <a key={index}><FontAwesomeIcon icon={social.icon} className="icon" />{social.info}</a>
+                            <a href={social.href} key={index} className="footer-link"><FontAwesomeIcon icon={social.icon} className="icon" />  {social.info}</a>
                         )}
                     </address>
                 </div>

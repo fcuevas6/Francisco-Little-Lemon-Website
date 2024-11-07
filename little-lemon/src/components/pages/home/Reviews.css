@@ -12,7 +12,6 @@
 
 
 .review {
-    /* display: flex; */
     max-width: 70rem;
     margin: 0 auto;
     display: grid;
