@@ -1,5 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./BookingForm.css"
+import {fetchAPI, submitAPI} from "../../../utils/api"
+
+export function formatTimeTo12Hour(time) {
+  const [hour, minute] = time.split(":").map(Number)
+  const period = hour >= 12 ? "PM" : "AM"
+  const formattedHour = hour % 12 === 0 ? 12 : hour % 12
+  const formattedMinute = minute === 0 ? "00" : minute
+  return `${formattedHour}:${formattedMinute} ${period}`
+}
 
 export default function BookingForm({ onSubmit }) {
   const [firstName, setFirstName] = useState("");
@@ -11,7 +20,19 @@ export default function BookingForm({ onSubmit }) {
   const [people, setPeople] = useState(1);
   const [occasion, setOccasion] = useState("");
   const [error, setError] = useState("")
+  const [availableTimes, setAvailableTimes] = useState([])
 
+  useEffect(() => {
+    const today = new Date()
+    setAvailableTimes(fetchAPI(today))
+  }, [])
+
+  const handleDateChange = (e) => {
+    const newDate = e.target.value
+    setDate(newDate)
+    const dateObject = new Date(newDate)
+    setAvailableTimes(fetchAPI(dateObject))
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,8 +54,15 @@ export default function BookingForm({ onSubmit }) {
       people,
       occasion,
     };
-    onSubmit(bookingDetails);
-    console.log('Booking Details:', bookingDetails);
+
+    if (submitAPI(bookingDetails)) {
+      alert('Reservation succesful!')
+      onSubmit(bookingDetails)
+    } else {
+      alert('Reservation failed.')
+    }
+
+    console.log(bookingDetails)
   };
 
   return (
@@ -91,7 +119,7 @@ export default function BookingForm({ onSubmit }) {
           <input
             type="date"
             value={date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={handleDateChange}
             required
           />
         </label>
@@ -101,19 +129,12 @@ export default function BookingForm({ onSubmit }) {
         Time:
             <select value={time} onChange={(e) => setTime(e.target.value)} required>
               <option value="">Select Time</option>
-            {Array.from({ length: 12 }, (_, i) => {
-                const hour = 16 + Math.floor(i / 2); // Calculate the hour
-                const minute = (i % 2) * 30; // 0 for even indexes, 30 for odd indexes
-                const formattedHour = hour > 12 ? hour - 12 : hour; // Convert to 12-hour format
-                const period = hour >= 12 ? 'PM' : 'AM'; // Determine AM/PM
-                const timeString = `${formattedHour}:${minute === 0 ? '00' : minute} ${period}`; // Format the time string
-
+              {availableTimes.map(time => {
+                const formattedTime = formatTimeTo12Hour(time)
                 return (
-                    <option key={timeString} value={`${hour}:${minute === 0 ? '00' : minute}`} required>
-                        {timeString}
-                    </option>
-                     );
-            })}
+                  <option key={time} value={time}>{formattedTime}</option>
+                )
+              })}
             </select>
         </label>
         {error && <p className="error-message">{error}</p>}
