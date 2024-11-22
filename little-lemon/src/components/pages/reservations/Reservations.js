@@ -66,7 +66,7 @@ export default function Reservations() {
                     <div className="booking-area">
                         <h2>Join us for dinner</h2>
                         <h3>Fill out your reservation information below!!</h3>
-                        <BookingForm onSubmit={handleFormSubmit} availableTimes={availableTimes} onDateChange={handleDateChange}/>
+                        <BookingForm onSubmit={handleFormSubmit} availableTimes={availableTimes} onDateChange={handleDateChange} id="booking-form"/>
                     </div>
                     <div className="booking-img">
                         <img src={restaurantImg} alt="Customers eating at table" />

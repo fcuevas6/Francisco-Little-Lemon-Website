@@ -66,68 +66,84 @@ export default function BookingForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} aria-labelledby="booking-form">
       <div>
-        <label>
+        <label htmlFor="first-name">
           First Name:
           <input
+            id="first-name"
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
+            aria-required="true"
           />
         </label>
       </div>
       <div>
-        <label>
+        <label htmlFor="last-name">
           Last Name:
           <input
+            id="last-name"
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
+            aria-required="true"
           />
         </label>
       </div>
       <div>
-        <label>
+        <label htmlFor="email">
           Email:
           <input
+            id="email"
             type='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            aria-required="true"
           />
         </label>
       </div>
       <div>
-        <label>
+        <label htmlFor="phone">
           Telephone:
           <input
+            id="phone"
             type='tel'
             placeholder='ex. 222-234-5678'
             value={phoneNum}
             onChange={(e) => setPhoneNum(e.target.value)}
             required
             inputMode="numeric"
+            aria-required="true"
           />
         </label>
       </div>
       <div>
-        <label>
+        <label htmlFor="date">
           Date:
           <input
+            id="date"
             type="date"
             value={date}
             onChange={handleDateChange}
             required
+            aira-required="true"
           />
         </label>
       </div>
       <div>
-        <label>
+        <label htmlFor="time">
         Time:
-            <select value={time} onChange={(e) => setTime(e.target.value)} required>
+            <select 
+            id="time"
+            value={time} 
+            onChange={(e) => setTime(e.target.value)} 
+            required
+            aira-required="true"
+            >
               <option value="">Select Time</option>
               {availableTimes.map(time => {
                 const formattedTime = formatTimeTo12Hour(time)
@@ -137,28 +153,32 @@ export default function BookingForm({ onSubmit }) {
               })}
             </select>
         </label>
-        {error && <p className="error-message">{error}</p>}
+        {error && <p className="error-message" aria-live="assertive">{error}</p>}
       </div>
       <div>
-        <label>
+        <label htmlFor="people">
           Number of People:
           <input
+            id="people"
             type="number"
             min="1"
             max="10"
             value={people}
             onChange={(e) => setPeople(e.target.value)}
             required
+            aria-required="true"
           />
         </label>
       </div>
       <div>
-        <label>
+        <label htmlFor="occasion">
           Occasion:
           <select
+            id="occasion"
             value={occasion}
             onChange={(e) => setOccasion(e.target.value)}
             required
+            aria-required="true"
           >
             <option value="None">None</option>
             <option value="Birthday">Birthday</option>
@@ -166,7 +186,7 @@ export default function BookingForm({ onSubmit }) {
           </select>
         </label>
       </div>
-      <button type="submit" className="primary-btn">Book Table </button>
+      <button type="submit" className="primary-btn" aria-label="Book Table">Book Table </button>
     </form>
   );
 };
