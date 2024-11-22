@@ -10,7 +10,6 @@ import { faX } from "@fortawesome/free-solid-svg-icons/faX"
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [activeLink, setActiveLink] = useState("/")
-    // const menuRef = useRef(null);
 
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen)
@@ -19,18 +18,6 @@ export default function Header() {
     function closeMenu() {
         setIsMenuOpen(false)
     }
-
-    // useEffect(() => {
-    //     function handleClickOutside(event) {
-    //         if (menuRef.current && !menuRef.current.contains(event.target)) {
-    //             closeMenu();
-    //         }
-    //     }
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //     };
-    // }, [menuRef]);
 
     function handleLinkClick(link) {
         setActiveLink(link);
