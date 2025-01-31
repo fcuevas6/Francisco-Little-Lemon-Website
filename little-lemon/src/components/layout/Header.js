@@ -1,27 +1,27 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import "./Header.css"
-import mainLogo from "./assets/logo.png"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping"
-import { faBars } from "@fortawesome/free-solid-svg-icons/faBars"
-import { faX } from "@fortawesome/free-solid-svg-icons/faX"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
+import mainLogo from "./assets/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import { faX } from "@fortawesome/free-solid-svg-icons/faX";
 
-export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [activeLink, setActiveLink] = useState("/")
+export default function Header({ cartCount }) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState("/");
 
     function toggleMenu() {
-        setIsMenuOpen(!isMenuOpen)
+        setIsMenuOpen(!isMenuOpen);
     }
 
     function closeMenu() {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
     }
 
     function handleLinkClick(link) {
         setActiveLink(link);
-        closeMenu()
+        closeMenu();
     }
 
     return (
@@ -33,7 +33,7 @@ export default function Header() {
                 <Link to="/" onClick={handleLinkClick}>
                     <img src={mainLogo} alt="Main logo" className="navbar-logo" />
                 </Link>
-                <ul className={`navbar-links ${isMenuOpen ? "active" : " "}`}>
+                <ul className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
                     <li>
                         <Link
                             to="/"
@@ -70,9 +70,11 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
-                <Link to="/order" className="link"><FontAwesomeIcon icon={faCartShopping} /></Link>
-
+                <div className="cart">
+                    <Link to="/order" className="link"><FontAwesomeIcon icon={faCartShopping} /></Link>
+                    <span className="cart-quantity">{cartCount}</span>
+                </div>
             </nav>
         </header>
-    )
+    );
 }
