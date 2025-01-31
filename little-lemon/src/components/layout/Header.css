@@ -33,6 +33,28 @@
     color: #495E57;
 }
 
+.cart {
+    display: flex;
+    position: relative;
+}
+
+.cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0.75em;
+    right: 0.75em;
+    background-color: #f4ce14;
+    color: #000;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    font-size: small;
+    margin: auto;
+
+}
+
 
 .navbar-logo {
     max-height: 50px;

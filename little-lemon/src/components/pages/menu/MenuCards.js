@@ -1,8 +1,8 @@
-import "./MenuCards.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPersonBiking } from '@fortawesome/free-solid-svg-icons'
+import "./MenuCards.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPersonBiking } from '@fortawesome/free-solid-svg-icons';
 
-export default function MenuCard({ meal }) {
+export default function MenuCard({ meal, addToCart }) {
     return (
         <div className="menu-card-container">
             <div className="menu-card-image">
@@ -15,9 +15,12 @@ export default function MenuCard({ meal }) {
                 </div>
                 <div className="menu-item-detail">
                     <p>{meal.description}</p>
-                    <p><strong>Order Delivery</strong><span className="delivery-icon"><FontAwesomeIcon icon={faPersonBiking}/></span></p>
+                    <button onClick={() => addToCart(meal)}>Add to Cart</button>
+                        <span className="delivery-icon">
+                            <FontAwesomeIcon icon={faPersonBiking} />
+                        </span>
                 </div>
             </div>
         </div>
-    )
+    );
 }
