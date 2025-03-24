@@ -1,3 +1,4 @@
+import React from 'react';
 import {Link} from "react-router-dom"
 import { meals } from "../data.js"
 import MealCard from "./MealCard.js";

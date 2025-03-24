@@ -1,3 +1,4 @@
+import React from "react"
 import { reviews } from "../data"
 import ReviewCard from "./ReviewCard"
 import "./Reviews.css"

@@ -1,3 +1,4 @@
+import React from "react"
 import "./AboutUs.css"
 import chefsImgA from "./assets/chefs-mario-and-adrian_a.jpg"
 import chefsImgB from "./assets/chefs-mario-and-adrian_b.jpg"

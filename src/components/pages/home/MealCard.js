@@ -1,3 +1,4 @@
+import React from "react"
 import "./MealCard.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPersonBiking } from "@fortawesome/free-solid-svg-icons"
