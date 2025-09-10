@@ -8,9 +8,11 @@ export default function ReviewCard({ review }) {
         <div className="review-container">
             <img src={review.image} alt={review.name} className="review-image"/>
             <h3>{review.name}</h3>
-            {Array.from({ length: review.rating }, (_, index) => (
-                <span key={index}><FontAwesomeIcon icon={faStar} /></span>
-            ))}
+            <div className="review-stars">
+                {Array.from({ length: review.rating }, (_, index) => (
+                    <span className="review-star" key={index}><FontAwesomeIcon icon={faStar} /></span>
+                ))}
+            </div>
             <p>" {review.review} "</p>
         </div>
     )

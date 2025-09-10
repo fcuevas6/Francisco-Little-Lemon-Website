@@ -17,3 +17,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+.review-stars {
+    display: flex;
+    margin: 0 auto;
+    color: #F4CE14;
+}
+
+.review-star {
+    margin: 0 0.2rem;
+}
